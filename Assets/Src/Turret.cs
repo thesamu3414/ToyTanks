@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour
     public List<Transform> turretBarrels;
     public GameObject bulletPrefab;
     public float reloadDelay = 1;
+    public Animator shootAnimation;
 
     private bool canShoot = true;
     //private Collider2D[] tankcolliders;
@@ -14,11 +15,13 @@ public class Turret : MonoBehaviour
 
     private void Update()
     {
+        shootAnimation.SetBool("shooting", false);
         if (canShoot == false)
         {
             currentDelay -= Time.deltaTime;
             if (currentDelay <= 0)
             {
+                
                 canShoot = true;
             }
         }
@@ -28,6 +31,7 @@ public class Turret : MonoBehaviour
     {
         if (canShoot)
         {
+            shootAnimation.SetBool("shooting", true);
             canShoot = false;
             currentDelay = reloadDelay;
 

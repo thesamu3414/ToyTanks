@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80529684}
   - component: {fileID: 80529685}
+  - component: {fileID: 80529687}
   - component: {fileID: 80529686}
   m_Layer: 0
   m_Name: tank_turret
@@ -149,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80529683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.050000004, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -224,7 +225,29 @@ MonoBehaviour:
   turretBarrels:
   - {fileID: 843613192}
   bulletPrefab: {fileID: 8715238720640331089, guid: a63623268e04bf04094a43c1681af95d, type: 3}
-  reloadDelay: 0.5
+  reloadDelay: 0.2
+  shootAnimation: {fileID: 80529687}
+--- !u!95 &80529687
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80529683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d6c75d32a6fa864fa1248fc22cd0679, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &102803733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1620,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.49
+  orthographic size: 3.18
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1621,7 +1644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1.848, y: 1.848, z: 1.848}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3684,7 +3707,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1294453918}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 2.49
+    OrthographicSize: 3.18
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3708,7 +3731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300481661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4403,18 +4426,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.107
+  m_LookaheadTime: 1
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
-  m_YDamping: 1
+  m_YDamping: 0
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.558
-  m_DeadZoneHeight: 0.365
+  m_DeadZoneWidth: 0.23
+  m_DeadZoneHeight: 0.32
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
