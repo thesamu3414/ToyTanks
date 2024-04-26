@@ -88,7 +88,7 @@ public class TankController : MonoBehaviour
         rb2d.MovePosition(wantedPosition);
 
         float rotationFactor = 0f;
-        if (movementJoystickVector.x >= 0.2)
+        if (Mathf.Abs(movementJoystickVector.x) >= 0.25)
         {
             rotationFactor = movementJoystickVector.x;
         }
